@@ -1,0 +1,37 @@
+/* Index CSS */
+
+.rowIndex {
+    height: 100vh;
+}
+
+.indexHr {
+    background-color: #FF0000;
+    color: #FF0000;
+    height: 25px;
+    width: 75%;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+
+}
+
+.indexHr:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+full-width-logo,
+.full-width-header {
+    height: 75vh;
+    text-align: center;
+    position: block;
+    overflow: hidden
+}
+
+.logo-carousel {
+    width: 100%;
+    object-fit: cover;
+    height: 75vh;
+}

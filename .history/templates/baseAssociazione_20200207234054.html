@@ -1,0 +1,243 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gli Amici Del Teatro">
+    <meta name="author" content="Antonio Augello">
+
+    <title>Gli Amici Del Teatro</title>
+
+
+    {%block title %}
+    {% endblock %}
+
+    <!-- FontAwesome CSS -->
+    <script type="text/javascript">
+        (function () {
+            var css = document.createElement('link');
+            css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+            css.rel = 'stylesheet';
+            css.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(css);
+        })();
+    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!--Personal CSS-->
+    <link rel="stylesheet" href="{% static 'scss/main.css' %}">
+
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg" style=" background-color: #ff0a0a; color: white;">
+        <div class="container-fluid">
+            <div class="navbar-header text-center">
+                <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand navbar-text text-center" href="{% url 'index' %}">Gli Amici Del Teatro</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="">Sroria</a>
+                    </li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="">
+                            Galleria</a></li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="">
+                            Eventi</a></li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="">
+                            News</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- /End Navigation -->
+
+    <!--Logo-->
+    <div id='logo'>
+        <img class="logopage" src="" alt="logo" style="width: 100%;">
+    </div>
+    <!--./Logo-->
+
+    <div class="container-personal">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+    <!--./Main Container-->
+
+    <!-- Footer -->
+    <div class="mt-5 pt-5 footer bottom" style="background-color: #ff0a0a;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-xs-12">
+                    <h2 class="text-light">Gli Amici Del Teatro</h2>
+                </div>
+            </div>
+            <!-- Grid row-->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic" href="https://www.facebook.com/socialdarrell/?ref=br_rs" target="_blank">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Pinterest-->
+                        <a class="pin-ic">
+                            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left mt-5">
+
+                <!-- Grid row -->
+                <div class="row mt-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                        <!-- Content -->
+                        <h6 class="text-uppercase font-weight-bold">Gli Amici Del Teatro</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
+                            amet,
+                            consectetur
+                            adipisicing elit.</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Products</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">MDBootstrap</a>
+                        </p>
+                        <p>
+                            <a href="#!">MDWordPress</a>
+                        </p>
+                        <p>
+                            <a href="#!">BrandFlow</a>
+                        </p>
+                        <p>
+                            <a href="#!">Bootstrap Angular</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">Your Account</a>
+                        </p>
+                        <p>
+                            <a href="#!">Become an Affiliate</a>
+                        </p>
+                        <p>
+                            <a href="#!">Help</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <i class="fas fa-home mr-3"></i>
+                            Viale della Gioventu', San Giovanni Rotondo, 71013</p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i>
+                            <a href="mailto:socialdarrell@gmail.com" class="element-content-text">
+                                info@lepiumedelvento.it
+                            </a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i>
+                            <a href="tel: +39 368 768 0057" class="element-content-text">
+                                +39 368 768 0057
+                            </a></p>
+                        <p>
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+            </div>
+            <!-- Footer Links -->
+
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="background-color: #960200e0;">© 2020 Web Site Designed
+            and Build:
+            <a href="https://onlineresumeantonio.herokuapp.com/"> Antonio Augello</a>
+        </div>
+        <!-- Copyright -->
+    </div>
+    <!-- ./End Footer-->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}">
+    </script>
+
+    <!-- extra js block-->
+    {% block script_js %} {% endblock %}
+
+    <!-- Personal JS-->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

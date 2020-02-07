@@ -1,0 +1,168 @@
+{% extends 'baseAssociazione.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<!-- Page Header-->
+<div class="full-width-header">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 logo-carousel" src="/media/img/slide1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 logo-carousel" src="/media/img/slide2.jpg" alt="Second slide">
+            </div>
+
+            <!-- Callout -->
+            <div class="callout-row jumbotron-container">
+                <div class="jumbotron page-jumbotron">
+                    <h1 class="display-4">News Title</h1>
+                    <p class="lead">News sub-header</p>
+                    <hr class="my-4 advert-hr">
+                    <p>News body
+                    </p>
+                    <a class="btn btn-primary btn-lg advert-btn" href="" role="button">Read More</a>
+                </div>
+            </div>
+            <!-- /.callout -->
+        </div>
+    </div>
+</div>
+<!-- ./Page Header-->
+
+<!-- Story Info-->
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="container text-center">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <div class="d-flex">
+                            <ul class="nav nav-pills list-inline mx-auto justify-content-center mb-3" id="pills-tab"
+                                role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                        role="tab" aria-controls="pills-home" aria-selected="true">Chi Siamo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                        role="tab" aria-controls="pills-profile" aria-selected="false">La Nostra Storia
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
+                                        role="tab" aria-controls="pills-contact" aria-selected="false">Spettacoli</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="pills-tabContent">
+                            <!--Chi siamo-->
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                aria-labelledby="pills-home-tab">L’Associazione Culturale Teatrale “Gli Amici del
+                                Teatro” di San Giovanni Rotondo (FG) è nata nel 1987 come compagnia amatoriale con un
+                                gruppo di giovani desiderosi di diffondere la cultura del teatro in un ambiente restio
+                                ad aprirsi al teatro in lingua italiana.
+                                Con il passare degli anni si è evoluta professionalmente facendo tesoro di tutte quelle
+                                esperienze sia positive che negative, alimentate da diversi ostacoli incontrati durante
+                                il suo percorso di crescita.
+                                L’associazione, infatti, essendo orfana di un ambiente agibile era costretta a svolgere
+                                le sue attività in un garage privo di pavimentazione e riscaldamento.
+                                Attualmente, grazie alla caparbietà e alle capacità inventive dei componenti, gode di
+                                una sede, si è costituita legalmente nel 2007 ed è iscritta all’albo comunale e all’albo
+                                regionale e gestisce laboratori teatrali.</div>
+                            <!--Storia-->
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                aria-labelledby="pills-profile-tab">
+                                ...</div>
+                            <!--Lista Spettacoli-->
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                aria-labelledby="pills-contact-tab">
+                                <ul class="list-inline">
+                                    <li>Anni 90′ - <span class="font-italic font-weight-bold">Quelli erano i
+                                            tempi</span>, commedia
+                                        scritta e diretta dalla regista Pia
+                                        Martino;</li>
+                                    <li>Anni 90′ - <span class="font-italic font-weight-bold">La Mandragola</span>,
+                                        commedia di Niccolò
+                                        Machiavelli, regia e adattamento
+                                        di
+                                        Pia Martino;</li>
+                                    <li>Anni 90′ - <span class="font-italic font-weight-bold">Napoli
+                                            milionaria</span>, commedia di
+                                        Edoardo De Filippo, regia e
+                                        adattamento
+                                        di Pia Martino;</li>
+                                    <li>Anni 90′ - <span class="font-italic font-weight-bold">L’Avaro</span>, commedia
+                                        di Molière, regia e adattamento di Pia Martino;
+                                    </li>
+                                    <li>Anni 90′ - <span class="font-italic font-weight-bold">Filumena Marturano</span>,
+                                        commedia di Edoardo De Filippo, regia e
+                                        adattamento
+                                        di Pia Martino;</li>
+                                    <li>1993 - <span class="font-italic font-weight-bold">Il malato immaginario</span>,
+                                        commedia di Molière, regia e adattamento di Pia
+                                        Martino;</li>
+                                    <li>1994 - <span class="font-italic font-weight-bold">Vince l’amore</span>, musical
+                                        scritto e diretto da Pia Martino;</li>
+                                    <li>1995 - <span class="font-italic font-weight-bold">Un grido dal silenzio</span>,
+                                        musical scritto e diretto da Pia Martino;</li>
+                                    <li>1997 - <span class="font-italic font-weight-bold">La Divina Commedia</span>, di
+                                        Dante Alighieri, musical, regia e adattamento di
+                                        Pia
+                                        Martino;</li>
+                                    <li>2008 - <span class="font-italic font-weight-bold">Questi Fantasmi</span>,
+                                        commedia di Edoardo De Filippo, regia e adattamento di
+                                        Pia
+                                        Martino;</li>
+                                    <li>2008 - <span class="font-italic font-weight-bold">Uomo e Galantuomo</span>,
+                                        commedia di Edoardo De Filippo, regia e adattamento di
+                                        Pia Martino;</li>
+                                    <li>2009 - <span class="font-italic font-weight-bold">Pazzi … ma non troppo</span>,
+                                        commedia scritta e diretta da Pia Martino;</li>
+                                    <li>2010 - <span class="font-italic font-weight-bold">Natale in casa
+                                            Cupiello</span>, commedia di Edoardo De Filippo, regia e
+                                        adattamento di Pia Martino;</li>
+                                    <li>2011 - <span class="font-italic font-weight-bold">Fra i due litiganti il
+                                            terzo ne gode</span>, commedia scritta e diretta da Pia
+                                        Martino;</li>
+                                    <li>2012 - <span class="font-italic font-weight-bold">I casi della vita</span>,
+                                        scritta e diretta da Pia Martino;</li>
+                                    <li>2012 - <span class="font-italic font-weight-bold">Miseria e Nobiltà</span>,
+                                        commedia di Edoardo Scarpetta, regia, traduzione e
+                                        adattamento di Pia Martino;</li>
+                                    <li>2013 - <span class="font-italic font-weight-bold">Ah … le donne!</span>,
+                                        commedia scritta e diretta da Pia Martino;</li>
+                                    <li>2014 - <span class="font-italic font-weight-bold">Gioco e Pregiudizio</span>,
+                                        commedia scritta e diretta da Pia Martino, aiuto
+                                        regia
+                                        Luigi Ciavarella;</li>
+                                    <li>2014 - <span class="font-italic font-weight-bold">Una buffa compagnia</span>,
+                                        commedia scritta e diretta da Pia Martino;</li>
+                                    <li>2014 - <span class="font-italic font-weight-bold">Giulietta e Romeo in
+                                            Parodia</span>, sketch scritto e diretto da Pia Martino;
+                                    </li>
+                                    <li>2015 - <span class="font-italic font-weight-bold">Un viaggio in miniera</span>,
+                                        spettacolo sociale, diretto da Pia Martino;</li>
+                                    <li>2015 - <span class="font-italic font-weight-bold">Cineteatromusica live
+                                            show</span>, spettacolo onemanshow, diretto da Luigi
+                                        Ciavarella;</li>
+                                    <li>2015 - <span class="font-italic font-weight-bold">La fortuna vien
+                                            ridendo</span>, commedia scritta e diretta da Martino Pia;</li>
+                                    <li>2016 - <span class="font-italic font-weight-bold">I Promessi Sposi</span>,
+                                        Parodia, parodia scritta e diretta da Pia Martino;</li>
+                                    <li>2017 - <span class="font-italic font-weight-bold">Il Varietà, Teatro e
+                                            Musica</span>, spettacolo di varietà diretto da Luigi
+                                        Ciavarella;</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

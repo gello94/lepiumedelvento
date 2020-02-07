@@ -1,0 +1,138 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Un Infermiere in Irlanda">
+    <meta name="author" content="Antonio Augello">
+
+    <title>Le Piume del Vento</title>
+
+
+    {%block title %}
+    {% endblock %}
+
+    <!-- FontAwesome CSS -->
+    <script type="text/javascript">
+        (function () {
+            var css = document.createElement('link');
+            css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+            css.rel = 'stylesheet';
+            css.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(css);
+        })();
+    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!--Personal CSS-->
+    <link rel="stylesheet" href="{% static 'scss/main.css' %}">
+
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar-grey-transparent">
+        <div class="container-fluid">
+            <div class="navbar-header text-center">
+                <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand navbar-text text-center" href="{% url 'index' %}">Un Infermiere in
+                    Irlanda</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'nmbi' %}">NMBI</a>
+                    </li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'get_experiences' %}">
+                            Esperienze</a></li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'get_careers' %}">
+                            Offerte di Lavoro</a></li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'get_blog' %}">
+                            Blog</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'profile' %}"><i class="fa fa-user"></i>
+                            Profile</a></li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>
+                            Log
+                            Out</a></li>
+                    {% else %}
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'register' %}"><i class="fa fa-user-plus"></i>
+                            Register</a></li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Log
+                            In</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- /End Navigation -->
+
+    <!--Logo-->
+    <div id='logo'>
+        <img class="logopage" src="http://uninfermiereinirlanda.altervista.org/images/logopage.jpg" alt="logo"
+            style="width: 100%;">
+    </div>
+    <!--./Logo-->
+
+    <div class="container">
+        <div class="container-personal">
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+    </div>
+    <!--./Main Container-->
+
+    <!-- Footer -->
+    <div class="mt-5 pt-5 footer bg-dark bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-xs-12">
+                    <h2 class="text-light">Un Infermiere in Irlanda</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col copyright">
+                    <p><small class="text-white-50">Antonio Augello © 2019. All Rights
+                            Reserved.</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./End Footer-->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}">
+    </script>
+
+    <!-- extra js block-->
+    {% block script_js %} {% endblock %}
+
+    <!-- Personal JS-->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Le Piume del Vento">
+    <meta name="author" content="Antonio Augello">
+
+    <title>Le Piume del Vento</title>
+
+    <!-- FontAwesome CSS -->
+    <script type="text/javascript">
+        (function () {
+            var css = document.createElement('link');
+            css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+            css.rel = 'stylesheet';
+            css.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(css);
+        })();
+    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!--Personal CSS-->
+    <link rel="stylesheet" href="{% static 'scss/main.css' %}">
+
+
+</head>
+
+<body>
+    <div class="row rowIndex text-center">
+        <div class="col-12 h-50 piumeDelVentoHomePage">
+            <h1><a href="{% url 'scuolaHome' %}"> Le Piume del Vento - Suola di Teatro</a> </h1>
+            <img src="/media/img/scuola.png" alt="scuola-logo" class="">
+        </div>
+        <div class="col-12 h-50">
+            <div class="associazioneHomePage">
+                <h1><a href="{% url 'associazioneHome' %}">Gli Amici del Teatro</a></h1>
+                <img src="">
+            </div>
+        </div>
+    </div>
+
+</body>
