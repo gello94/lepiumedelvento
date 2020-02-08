@@ -8,7 +8,8 @@
         "blog/_contact.scss",
         "blog/_footer.scss",
         "blog/_index.scss",
-        "blog/_post.scss"
+        "blog/_post.scss",
+        "blog/_map.scss"
     ],
     "names": [],
     "file": "main.css"

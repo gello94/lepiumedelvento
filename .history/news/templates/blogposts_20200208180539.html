@@ -1,0 +1,48 @@
+{% extends "baseAssociazione.html" %}
+
+{% block content %}
+
+<h1>Un Infermiere In Irlanda - Le ultime news</h1>
+{% if request.user.is_superuser %}
+<a href="{% url 'new_post' %}" class="btn btn-primary btn-sm mb-3 mt-3">Aggiungi Nuovo Post</a>
+{% endif %}
+<div class="row">
+
+    {% for post in posts %}
+    <div class="col-sm-12 mb-5">
+        <div class="card h-100">
+            <div class="card-header">
+                <h5 class="card-title"><a href="{% url 'post_detail' post.id %}">{{ post.titolo }}</a></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Autore: {{post.author}} - {{ post.published_date }}</h6>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ post.contenuto|truncatewords:350 | safe }}</p>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="row">
+                    <div class="col-6">
+                        <h6 class="col-sm card-subtitle mb-2 text-muted mt-3">Visualizzazioni: {{post.views}}</h6>
+                    </div>
+                    <div class="col-sm"><a href="{% url 'post_detail' post.id %}"
+                            class="col-6 btn btn-primary float-right">Leggi
+                            altro</a>
+                    </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+{% block script_js %}
+<script>
+    $(document).ready(function () {
+        $('body,html').animate({
+            scrollTop: 250
+        }, 800);
+    });
+</script>
+{% endblock %}
