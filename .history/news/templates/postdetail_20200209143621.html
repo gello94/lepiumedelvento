@@ -1,0 +1,26 @@
+{% extends "baseAssociazione.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4 col-sm-12 text-center">
+        {% if post.image %}
+        <img class="img-blogpost" src="{{ post.image }}">
+        {% endif %}
+    </div>
+    <div class="col-sm-10 col-md-9">
+        <h3>{{ post.titolo }}</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9">
+                    <p>{{ post.contenuto|safe }}</p>
+                    <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
+                    <p><span class="boldtext">Views:</span> {{post.views}}</p>
+                    <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -77,9 +77,24 @@ hr {
 }
 
 /*--------------------------------------------Colors*/
+#news {
+  color: whitesmoke;
+  background-color: red;
+  -webkit-box-shadow: 0 0 12px 5px #888888;
+          box-shadow: 0 0 12px 5px #888888;
+}
+
 /************************** Text Formatting******/
 .blog-post-title {
   font-weight: bold !important;
+}
+
+.slider_bar {
+  height: 20px;
+}
+
+.carousel-indicators li {
+  background-color: black;
 }
 
 @media (max-width: 992px) {

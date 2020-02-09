@@ -1,0 +1,41 @@
+{% extends "baseAssociazione.html" %}
+
+{% block content %}
+
+<div class="row">
+    <!--Latest News-->
+    <div class="col-lg-12 mt-5 mb-5">
+        <div class="container">
+            <h2>Ultime News da Le Piume del Vento</h2>
+            <!--card-->
+            <div class="row">
+                {% for post in posts %}
+
+                <div class="col-xs-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <a href="{% url 'post_detail' post.id %}"><img class="img-shop card-img-top"
+                                src="{{ post.image }}" alt=" {{ post.titolo }}"></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="{% url 'post_detail' post.id %}">{{ post.titolo }}</a>
+                            </h4>
+                            <p class="card-text text-dark">{{ post.contenuto|truncatechars:100 }}</p>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--./card-->
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+        <!-- / End Latest Product Carousel -->
+
+    </div>
+</div>
+
+<!--./Latest News-->
+
+{% endblock %}

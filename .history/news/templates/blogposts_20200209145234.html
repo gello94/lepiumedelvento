@@ -1,0 +1,70 @@
+{% extends "baseAssociazione.html" %}
+
+{% block content %}
+
+<h1>News</h1>
+<div class="row">
+    <!--Latest News-->
+    <div id="news" class="col-lg-12 mt-5 mb-5">
+        <div class="container">
+            <h2>Ultime News da Le Piume del Vento</h2>
+            <div id="bestsellers-carousel" class="carousel slide my-4" data-ride="carousel">
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row-carousel" style="display:-webkit-box">
+                            {% for post in posts %}
+                            <!--card-->
+                            <div class="col-xs-12 col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100">
+                                    <a href="{% url 'post_detail' post.id %}"><img class="img-shop card-img-top"
+                                            src="{{ post.image }}" alt=" {{ post.titolo }}"></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="{% url 'post_detail' post.id %}">{{ post.titolo }}</a>
+                                        </h4>
+                                        <p class="card-text text-dark">{{ post.contenuto|truncatechars:100 }}</p>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--./card-->
+                                {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row-carousel" style="display:-webkit-box">
+                                {% endif %} {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Left and right controls -->
+                    <div class="slider_bar">
+                        <ol class="carousel-indicators">
+                            <li data-target="#bestsellers-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#bestsellers-carousel" data-slide-to="1"></li>
+                            <li data-target="#bestsellers-carousel" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                    <!--/.Carousel Wrapper-->
+                </div>
+                <!-- / End Latest Product Carousel -->
+
+            </div>
+        </div>
+    </div>
+    <!--./Latest News-->
+</div>
+
+{% endblock %}
+
+{% block script_js %}
+<script>
+    $(document).ready(function () {
+        $('body,html').animate({
+            scrollTop: 250
+        }, 800);
+    });
+</script>
+{% endblock %}
