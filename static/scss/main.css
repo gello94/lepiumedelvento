@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-html,
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+html {
+  height: 100%;
+}
+
 body {
-  position: relative;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 img {
@@ -13,7 +16,6 @@ img {
 .container-personal {
   min-width: 100%;
   margin-top: 30px;
-  min-height: 100vh;
 }
 
 .container_pages {
@@ -23,10 +25,6 @@ img {
 
 #page-content-wrapper {
   width: 100%;
-}
-
-.img-shop {
-  height: 200px;
 }
 
 footer {
@@ -70,6 +68,42 @@ hr {
   height: 50px;
 }
 
+.imgHome {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.homeCenteredDiv {
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.associazioneHomeImg {
+  min-width: 250px;
+  min-height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.scuolaHomeImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 250px;
+  min-height: 250px;
+}
+
 .card {
   -webkit-box-shadow: 0 0 8px 1px #888888;
           box-shadow: 0 0 8px 1px #888888;
@@ -82,6 +116,10 @@ hr {
   background-color: red;
   -webkit-box-shadow: 0 0 12px 5px #888888;
           box-shadow: 0 0 12px 5px #888888;
+}
+
+.gliamiciColor {
+  background-color: #343635 !important;
 }
 
 /************************** Text Formatting******/
@@ -287,23 +325,14 @@ a .element-content-text:hover {
 }
 
 /* Index CSS */
-.rowIndex {
-  height: 100vh;
-}
-
 .indexHr {
-  background-color: #FF0000;
+  background-image: url(/media/img/hr_divider.png);
   color: #FF0000;
   height: 25px;
   width: 75%;
   border-radius: 50px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
-}
-
-.piumeDelVentoHomePage,
-.associazioneHomePage {
-  max-width: 45%;
 }
 
 .full-width-header {
@@ -336,6 +365,20 @@ a .element-content-text:hover {
   -o-object-fit: cover;
      object-fit: cover;
   height: 75vh;
+}
+
+.piumeDelVentoHomePage,
+.associazioneHomePage {
+  border: 1px solid;
+  -webkit-box-shadow: 1px 0px 3px 4px #888888;
+          box-shadow: 1px 0px 3px 4px #888888;
+  max-width: 80%;
+  margin: auto;
+}
+
+.piumeDelVentoHomePage:hover,
+.associazioneHomePage:hover {
+  background-color: #69343452;
 }
 
 .img-blogpost {
@@ -388,5 +431,123 @@ a .element-content-text:hover {
     padding-right: 0px;
     padding-left: 0px;
   }
+}
+
+/* FontAwesome for working BootSnippet :> */
+#team {
+  background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #108d6f;
+  border-color: #108d6f;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007b5e;
+  border-color: #007b5e;
+}
+
+section {
+  padding: 60px 0;
+}
+
+section .section-title {
+  text-align: center;
+  color: #007b5e;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+#team .card {
+  border: none;
+  background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px #9e9e9e;
+  box-shadow: 5px 7px 9px -4px #9e9e9e;
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
+}
+
+.backside .card a {
+  font-size: 18px;
+  color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=main.css.map */
