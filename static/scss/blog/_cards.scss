@@ -17,16 +17,23 @@
     left: 0;
     background-size: cover;
     background-position: center;
-    transition: -webkit-transform .2s;
-    transition: transform .2s;
-    background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+
 }
 
 .firmalar {
     background: #f1f4f5c7;
 }
 
+.card {
+    margin: 0px !important;
+}
+
+
 @media (max-width: 768px) {
+
+    .image-flip {
+        margin-bottom: 150px;
+    }
 
     .firma-logo {
         width: calc(33.66667% - .75rem);

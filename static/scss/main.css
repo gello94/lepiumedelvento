@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 html {
-  height: 100%;
-}
-
-body {
   min-height: 100%;
 }
 
@@ -77,15 +73,6 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   vertical-align: middle;
-}
-
-.homeCenteredDiv {
-  width: 100%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 .associazioneHomeImg {
@@ -370,15 +357,36 @@ a .element-content-text:hover {
 .piumeDelVentoHomePage,
 .associazioneHomePage {
   border: 1px solid;
+  border-radius: 30px;
   -webkit-box-shadow: 1px 0px 3px 4px #888888;
           box-shadow: 1px 0px 3px 4px #888888;
-  max-width: 80%;
   margin: auto;
+  background-color: #00000061;
 }
 
 .piumeDelVentoHomePage:hover,
 .associazioneHomePage:hover {
   background-color: #69343452;
+}
+
+@media (min-width: 992px) {
+  .piumeDelVentoHomePage,
+  .associazioneHomePage,
+  .imgHomePage {
+    min-height: 350px;
+    max-height: 350px;
+  }
+}
+
+.homePageDiv {
+  margin: 20px;
+}
+
+.homeBody {
+  background: url("/static/image/bkg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .img-blogpost {
@@ -405,18 +413,20 @@ a .element-content-text:hover {
   left: 0;
   background-size: cover;
   background-position: center;
-  transition: -webkit-transform .2s;
-  -webkit-transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
-  background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
 }
 
 .firmalar {
   background: #f1f4f5c7;
 }
 
+.card {
+  margin: 0px !important;
+}
+
 @media (max-width: 768px) {
+  .image-flip {
+    margin-bottom: 150px;
+  }
   .firma-logo {
     width: calc(33.66667% - .75rem);
     height: 6.5rem;

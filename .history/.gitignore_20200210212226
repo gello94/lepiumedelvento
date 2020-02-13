@@ -1,9 +1,0 @@
-.env
-        .vscode
-        .venv
-        __pycache__
-        venv/
-        env/
-        .history/
-        .history/
-        *.history

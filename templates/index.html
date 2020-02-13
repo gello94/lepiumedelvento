@@ -33,18 +33,17 @@
 
 </head>
 
-<body style="background: url('/static/image/bkg.jpg');  background-repeat: no-repeat;
-background-size: cover;">
+<body class="homeBody">
 
-    <div class="homeCenteredDiv">
-        <div class="container-fluid">
+    <div class="container-fluid">
+        <div class="homePageDiv">
             <div class="row text-center">
 
                 <!-- Scuola Logo-->
                 <div class="col-sm-12 col-md-6 piumeDelVentoHomePage">
                     <a href="{% url 'scuolaHome' %}">
                         <div class="scuolaHomeImg h100">
-                            <img class="mx-auto" src="/media/img/scuola_white.png" alt="associazione-logo">
+                            <img class="mx-auto imgHomePage" src="/media/img/scuola_white.png" alt="associazione-logo">
                         </div>
                     </a>
                 </div>
@@ -59,7 +58,7 @@ background-size: cover;">
                 <div class="col-sm-12 col-md-6 associazioneHomePage">
                     <a href="{% url 'associazioneHome' %}">
                         <div class="associazioneHomeImg h-100">
-                            <img class="mx-auto" src="/media/img/associazione_completo_white.png"
+                            <img class="mx-auto imgHomePage" src="/media/img/associazione_completo_white.png"
                                 alt="associazione-logo">
                         </div>
                     </a>
