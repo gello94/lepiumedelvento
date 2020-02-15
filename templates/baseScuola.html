@@ -47,7 +47,7 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand navbar-text text-center" href="{% url 'index' %}">Le Piume del Vento</a>
+                <a class="navbar-brand navbar-text text-center" href="{% url 'scuolaHome' %}">Le Piume del Vento</a>
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto text-center">
@@ -56,11 +56,13 @@
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
                             href="{% url 'docenti' %}">
                             Docenti</a></li>
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="">
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'galleryListLePiume'%}">
                             Galleria</a></li>
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="{% url 'corsi'%}">
                             Corsi</a></li>
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="{% url 'news' %}">
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'newsLePiume' %}">
                             News</a></li>
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="#mapouter">
                             Contatti</a></li>
@@ -69,12 +71,6 @@
         </div>
     </nav>
     <!-- /End Navigation -->
-
-    <!--Logo-->
-    <div id='logo'>
-        <img class="logopage" src="" alt="logo" style="width: 100%;">
-    </div>
-    <!--./Logo-->
 
     <div class="container-personal">
         {% block content %}

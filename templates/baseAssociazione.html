@@ -47,17 +47,20 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand navbar-text text-center" href="{% url 'index' %}">Gli Amici del Teatro</a>
+                <a class="navbar-brand navbar-text text-center" href="{% url 'associazioneHome' %}">Gli Amici del
+                    Teatro</a>
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto text-center">
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="#storia">Sroria</a>
                     </li>
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="">
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'galleryListGliAmici'%}">
                             Galleria</a></li>
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="">
                             Eventi</a></li>
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="{%url 'news'%}">
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{%url 'newsGliAmici'%}">
                             News</a></li>
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="#mapouter">
                             Contatti</a></li>
@@ -66,12 +69,6 @@
         </div>
     </nav>
     <!-- /End Navigation -->
-
-    <!--Logo-->
-    <div id='logo'>
-        <img class="logopage" src="" alt="logo" style="width: 100%;">
-    </div>
-    <!--./Logo-->
 
     <div class="container-personal">
 

@@ -23,6 +23,7 @@ from home import urls as urls_home
 from accounts import urls as urls_accounts
 from news import urls as urls_news
 from scuola import urls as urls_scuola
+from gallery import urls as urls_gallery
 from associazione import urls as urls_associazione
 
 
@@ -32,6 +33,7 @@ urlpatterns = [
     path('home/', include(urls_home)),
     path('scuola/', include(urls_scuola)),
     path('news/', include(urls_news)),
+    path('galleria/', include(urls_gallery)),
     path('associazione/', include(urls_associazione)),
     re_path('media/(?P<path>.*)', serve, {'document_root': MEDIA_ROOT}),
 ]

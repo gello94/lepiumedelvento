@@ -22,7 +22,7 @@ class Post(models.Model):
         blank=True, null=True, default=timezone.now)
     views = models.IntegerField(default=0)
     tag = models.CharField(max_length=100, choices=CHOOSE_FIELD)
-    image = models.CharField(max_length=100000, null=True)
+    image = models.CharField(max_length=1000, null=True)
 
     def __str__(self):
         return self.titolo

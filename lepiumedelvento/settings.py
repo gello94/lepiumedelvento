@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'scuola',
     'associazione',
+    'gallery',
 ]
 
 MIDDLEWARE = [

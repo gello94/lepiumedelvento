@@ -5,21 +5,38 @@ from django.contrib.auth.decorators import login_required
 from .models import Post
 
 
-def get_blog(request):
+def newsLePiume(request):
     """
     Create a view that will return a list
     of Posts that were published prior to 'now'
     and render them to the 'blogposts.html' template
     """
     posts = Post.objects.filter(published_date__lte=timezone.now()
-                                ).order_by('-published_date')
+                                ).order_by('-published_date').filter(tag="PIUMEDELVENTO")
 
     # pagination
     paginator = Paginator(posts, 12)
     page = request.GET.get('page')
     pagination_posts = paginator.get_page(page)
 
-    return render(request, "blogposts.html", {'posts': posts, 'pagination_posts': pagination_posts})
+    return render(request, "newsLePiume.html", {'posts': posts, 'pagination_posts': pagination_posts})
+
+
+def newsGliAmici(request):
+    """
+    Create a view that will return a list
+    of Posts that were published prior to 'now'
+    and render them to the 'blogposts.html' template
+    """
+    posts = Post.objects.filter(published_date__lte=timezone.now()
+                                ).order_by('-published_date').filter(tag="AMICIDELTEATRO")
+
+    # pagination
+    paginator = Paginator(posts, 12)
+    page = request.GET.get('page')
+    pagination_posts = paginator.get_page(page)
+
+    return render(request, "newsGliAmici.html", {'posts': posts, 'pagination_posts': pagination_posts})
 
 
 def post_detail(request, pk):
