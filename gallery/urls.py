@@ -12,4 +12,4 @@ urlpatterns = [
          galleryListLePiume, name="galleryListLePiume"),
     path('lepiumedelvento/<int:pk>',
          lePiumeGallery, name='lePiumeGallery'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_ROOT, document_root=settings.MEDIA_ROOT)

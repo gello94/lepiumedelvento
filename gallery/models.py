@@ -12,6 +12,7 @@ CHOOSE_FIELD = [
 class Gallery(models.Model):
 
     name = models.CharField(max_length=200, unique=True)
+    title = models.CharField(max_length=200, blank=True)
     description = models.CharField(max_length=1000, null=True, blank=True)
     published_date = models.DateTimeField(
         blank=True, null=True, default=timezone.now)
@@ -21,13 +22,3 @@ class Gallery(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class ImagesList(models.Model):
-    gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True)
-    titolo = models.CharField(max_length=1000, null=True, blank=True)
-    descrizione = models.CharField(max_length=1000, null=True, blank=True)
-    img_link = models.CharField(max_length=1000)
-
-    def __str__(self):
-        return self.img_link

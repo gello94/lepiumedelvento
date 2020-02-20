@@ -10,11 +10,12 @@
         <div class="col-sm-12 col-md-6 col-lg-4 p-3">
             <a href="{% url 'gliAmiciGallery' album.id %}">
                 <div class="card cardGallery bg-dark text-white">
-                    <img src="{{album.cover}}" class="card-img" alt="{{album.name}}">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title text-white font-weight-bold">{{album.name}}</h5>
+                    <img src="{{album.cover}}" class="card-img" alt="{{album.title}}">
+                    <div class="card-img-overlay card-title-gallery">
+                        <h5 class="card-title text-white font-weight-bold">{{album.title}}</h5>
+                        {% if album.description != none %}
                         <p class="card-text">{{album.description}}</p>
-                        <p class="card-text">{{album.published_date}}</p>
+                        {% endif %} <p class="card-text">{{album.published_date|date:"d M Y"}}</p>
                     </div>
                 </div>
             </a>
@@ -22,6 +23,5 @@
         {% endfor %}
     </div>
 </div>
-
 
 {%endblock%}

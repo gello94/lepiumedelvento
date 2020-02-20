@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap|Poppins&display=swap");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 html {
   min-height: 100%;
+}
+
+body {
+  font-family: "Poppins", "Roboto", sans-serif;
 }
 
 img {
@@ -98,6 +102,10 @@ hr {
   margin: 0px 10px 0px 10px;
 }
 
+.marginTopNews {
+  margin-top: 100px;
+}
+
 /*--------------------------------------------Colors*/
 #news {
   color: whitesmoke;
@@ -156,6 +164,10 @@ hr {
   border-radius: 10px;
 }
 
+.navbar.navbar-dark .navbar-toggler {
+  color: #fff;
+}
+
 @media (max-width: 992px) {
   .navbar-grey-transparent {
     background-color: #343a40 !important;
@@ -190,48 +202,12 @@ hr {
 }
 
 .element-content-text {
-  color: #dadad3;
-}
-
-a .element-content-text:hover {
-  color: #dadad3;
+  color: black;
 }
 
 /*.....................................................Left Aside Bar*/
-.contact-items-body {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 25px;
-  padding: 5px;
-}
-
 .contact-elements {
   text-align: center;
-}
-
-.contact-phone-square,
-.contact-email-square {
-  max-width: 48%;
-  background-color: #525252;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 0px;
-  padding-right: 0px;
-  border-radius: 5px;
-  margin: 3px;
-  color: white;
-}
-
-.contact-phone-square:hover {
-  background-color: #525252;
-  color: white;
-}
-
-.contact-email-square:hover {
-  background-color: #525252;
-  color: white;
 }
 
 .contact-element-icon {
@@ -427,6 +403,11 @@ a .element-content-text:hover {
 .cardGallery:hover {
   -webkit-box-shadow: 0px 0px 19px 10px rgba(102, 102, 102, 0.43);
           box-shadow: 0px 0px 19px 10px rgba(102, 102, 102, 0.43);
+}
+
+.card-title-gallery {
+  background: #000000ad;
+  max-height: 30%;
 }
 
 @media (max-width: 768px) {
@@ -659,7 +640,13 @@ img {
   animation: poppy 500ms linear both;
 }
 
+.gallerySizeImg {
+  min-height: 250px;
+  max-height: 250px;
+}
+
 .popup figure img {
+  height: auto !important;
   position: relative;
   z-index: 2;
   border-radius: 15px;
@@ -670,8 +657,6 @@ img {
 .popup figure figcaption {
   position: absolute;
   bottom: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.78)));
-  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.78));
   z-index: 2;
   width: 100%;
   border-radius: 0 0 15px 15px;
@@ -1009,6 +994,68 @@ img {
   100% {
     -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -300, -225, 0, 1);
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -300, -225, 0, 1);
+  }
+}
+
+.badge {
+  background: white;
+  width: 100px !important;
+  position: absolute;
+  padding-top: 6px;
+  float: right;
+  right: 11px;
+  top: 10px;
+  width: 80px;
+  height: 25px;
+  text-align: center;
+}
+
+.dateText {
+  font-size: 15px;
+}
+
+.pulse {
+  display: block;
+  width: 100px;
+  height: 46px;
+  background: #fc013af5 !important;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 rgba(225, 27, 27, 0.4);
+  box-shadow: 0 0 0 rgba(255, 0, 0, 0.4);
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+  padding-top: 19px;
+}
+
+.pulse:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+            box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+            box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+            box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }
 /*# sourceMappingURL=main.css.map */

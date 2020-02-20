@@ -1,0 +1,170 @@
+{% extends "baseAssociazione.html" %}
+{% load staticfiles %}
+{%block title %}
+
+<title>Contatti</title>
+{% endblock %}
+
+{%block head%}
+<!-- EmailJS Script-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("user_96n5MVsQfZCvUmDKXU673");
+    })();
+</script>
+{%endblock%}
+
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <!--Left aside bar-->
+        <div class="col-xs-12 col-md-6 mt-4">
+            <h2 class="uppercase text-center">Recapiti</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="contact-elements">
+                                        <div class="contact-elements-content">
+                                            <a class="contact-element-icon">
+                                                <i class="contact-elements-icon fa fa-phone" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="tel:+39 3385250290" class="element-content-text">
+                                                <p>Il Dirigente</p>
+                                                <p>+39 3385250290</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="contact-elements">
+                                        <div class="contact-elements-content">
+                                            <a class="contact-element-icon">
+                                                <i class="contact-elements-icon fa fa-phone" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="tel:+39 3275488597" class="element-content-text">
+                                                <p>Direttore Artistico</p>
+                                                <p>+39 3275488597</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class=" contact-elements">
+                                        <div class="contact-elements-content">
+                                            <a class="contact-element-icon">
+                                                <i class="contact-elements-icon fa fa-envelope" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="mailto:info@lepiumedelvento.it" class="element-content-text">
+                                                <p>info@lepiumedelvento.it</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!--/.Left aside bar-->
+
+        <!--Contact Form - Right aside bar-->
+        <div class="col-xs-12 col-md-6 mt-4">
+            <h3 class="text-center">Contattaci</h3>
+
+            <!--Alert-->
+            <div id="email-alert"></div>
+            <!--./Alert-->
+
+            <div class="row bg-color-contact">
+                <div class="center-form">
+                    <form onsubmit="return sendMail(this);" method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required />
+                        <input type="text" name="emailaddress" class="form-control" id="emailaddress"
+                            placeholder="Email" required />
+                        <input type="text" name="order_id" class="form-control" id="order" placeholder="Order ID" />
+                        <textarea rows="5" name="enquiry" class="form-control" id="enquiry" placeholder="Enquiry"
+                            required></textarea>
+                        <button type="submit" class="btn btn-outline-primary send-email-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--/.Contact Form-->
+        <!--Orari e contatti-->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row mt-5 mb-5">
+                    <div class="col-sm12 col-md-6">
+                        <!-- MAP TO INSERT IN CONTACT INFO!-->
+                        <div id="mapouter">
+                            <iframe width='100%' height='250px' id='mapcanvas'
+                                src='https://maps.google.com/maps?q=le%20piume%20del%20vento%20san%20giovanni%20rotondo&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed'
+                                frameborder='0' scrolling='no' marginheight='0' marginwidth='0'>
+                                <div class="zxos8_gm"><a rel="bookmark"
+                                        href="https://www.freecarcheck.co.uk/guides/find-car-owner-by-vehicle-registration-number-plate">this</a>
+                                </div>
+                                <div style='overflow:hidden;'>
+                                    <div id='gmap_canvas' style='height:100%;width:100%;'></div>
+                                </div>
+                                <div><small>Powered by <a href="https://www.embedgooglemap.co.uk">Embed Google
+                                            Map</a></small>
+                                </div>
+                            </iframe>
+                        </div>
+                        <!--./MAP-->
+                    </div>
+                    <div class="col-sm12 col-md-6">
+                        <h3 class="text-center">Orari di apertura</h3>
+                        <table class="mx-auto">
+                            <tr>
+                                <th>Lunedi</th>
+                                <td>9am - 5pm</td>
+                            </tr>
+                            <tr>
+                                <th>Martedi</th>
+                                <td>9am - 5pm</td>
+                            </tr>
+                            <tr>
+                                <th>Mercoledi</th>
+                                <td>9am - 5pm</td>
+                            </tr>
+                            <tr>
+                                <th>Giovedi</th>
+                                <td>9am - 5pm</td>
+                            </tr>
+                            <tr>
+                                <th>Venerdi</th>
+                                <td>9am-5pm</td>
+                            </tr>
+                            <tr>
+                                <th>Sabato</th>
+                                <td>Chiuso</td>
+                            </tr>
+                            <tr>
+                                <th>Domenica</th>
+                                <td>Chiuso</td>
+                            </tr>
+                            <th>Festivi chiuso</th>
+                            <th></th>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--./Orari e contatti-->
+    </div>
+</div>
+{% endblock %}

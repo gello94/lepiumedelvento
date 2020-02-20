@@ -37,9 +37,10 @@
 
 </head>
 
-<body>
+<body class="firmalar">
     <!-- Navigation -->
-    <nav id="navbar" class="navbar fixed-top navbar-expand-lg" style=" background-color: #ff0a0a;">
+    <nav id="navbar" class="navbar fixed-top navbar-expand-md navbar-dark cyan darken-3"
+        style=" background-color: #ff0a0a;">
         <div class="container-fluid">
             <div class="navbar-header text-center">
                 <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
@@ -51,20 +52,19 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="#storia">Storia</a>
-                    </li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="{% url 'corsi'%}">
+                            Corsi</a></li>
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
                             href="{% url 'docenti' %}">
                             Docenti</a></li>
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
                             href="{% url 'galleryListLePiume'%}">
                             Galleria</a></li>
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="{% url 'corsi'%}">
-                            Corsi</a></li>
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
                             href="{% url 'newsLePiume' %}">
                             News</a></li>
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="#mapouter">
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'contactLePiume' %}">
                             Contatti</a></li>
                 </ul>
             </div>

@@ -37,9 +37,9 @@
 
 </head>
 
-<body>
+<body class="firmalar">
     <!-- Navigation -->
-    <nav id="navbar" class="navbar fixed-top navbar-expand-lg gliamiciColor">
+    <nav id="navbar" class="navbar fixed-top navbar-expand-md navbar-dark cyan darken-3 gliamiciColor">
         <div class="container-fluid">
             <div class="navbar-header text-center">
                 <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
@@ -52,17 +52,14 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="#storia">Sroria</a>
-                    </li>
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
-                            href="{% url 'galleryListGliAmici'%}">
-                            Galleria</a></li>
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="">
-                            Eventi</a></li>
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
                             href="{%url 'newsGliAmici'%}">
                             News</a></li>
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text" href="#mapouter">
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'galleryListGliAmici'%}">
+                            Galleria</a></li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'contactGliAmici' %}">
                             Contatti</a></li>
                 </ul>
             </div>
@@ -183,8 +180,8 @@
                             Via Nicola Totta, 23, 71013 San Giovanni Rotondo, FG</p>
                         <p>
                             <i class="fas fa-envelope mr-3"></i>
-                            <a class="text-light" href="mailto:info@lepiumedelvento.it" class="element-content-text">
-                                info@lepiumedelvento.it
+                            <a class="text-light" href="ascgliamicidelteatro@gmail.com" class="element-content-text">
+                                ascgliamicidelteatro@gmail.com
                             </a>
                         </p>
                         <p>

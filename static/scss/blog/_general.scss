@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap|Poppins&display=swap');
 
 
-$font-stack: 'Roboto',
+$font-stack: 'Poppins',
+'Roboto',
 sans-serif;
 $primary-color: #333;
 
 html {
     min-height: 100%;
+}
+
+body {
+    font-family: $font-stack;
 }
 
 img {
@@ -97,6 +102,9 @@ hr {
     margin: 0px 10px 0px 10px;
 }
 
+.marginTopNews {
+    margin-top: 100px;
+}
 
 /*--------------------------------------------Colors*/
 #news {

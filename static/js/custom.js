@@ -42,12 +42,14 @@ popup = {
         $('figure').click(function () {
             popup.open($(this));
             $('.navbar').hide()
+            $('figure').removeClass('gallerySizeImg')
         });
 
         $(document).on('click', '.popup img', function () {
             return false;
         }).on('click', '.popup', function () {
             popup.close();
+            $('figure').addClass('gallerySizeImg')
             $('.navbar').show()
         })
     },

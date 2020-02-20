@@ -12,14 +12,18 @@
                 {% for post in pagination_posts %}
                 <div class="col-xs-12 col-md-6 col-lg-4 mb-4">
                     <div class="card h-100">
-                        <a href="{% url 'post_detail' post.id %}"><img class="img-shop card-img-top"
+                        <span class="badge badgeDange">
+                            <p class="dateText"> {{post.published_date|date:"d M"}}
+                                {{post.published_date|date:"Y"}}</p>
+                        </span>
+                        <a href="{% url 'postdetailLePiume' post.id %}"><img class="img-shop card-img-top"
                                 src="{{ post.image }}" alt=" {{ post.titolo }}"></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="{% url 'post_detail' post.id %}">{{ post.titolo }}</a>
+                                <a href="{% url 'postdetailLePiume' post.id %}">{{ post.titolo }}</a>
                             </h4>
-                            <p class="card-text text-dark">{{ post.contenuto|truncatechars:100 }} <a
-                                    href="{% url 'post_detail' post.id %}">LEGGI ALTRO</a></p>
+                            <p class="card-text text-dark">{{ post.contenuto | truncatewords:35 | safe}}<a
+                                    href="{% url 'postdetailLePiume' post.id %}">LEGGI ALTRO</a></p>
                             <div>
                             </div>
                         </div>

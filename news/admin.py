@@ -4,7 +4,10 @@ from .models import Post
 
 
 class PostAdmin(SummernoteModelAdmin):
-    summernote_fields = ('content',)
+    summernote_fields = ('contenuto',)
+    list_display = ('titolo', 'tag', 'published_date')
+    list_filter = ['titolo', 'tag']
+    search_fields = ['titolo', 'tag']
 
 
 admin.site.register(Post, PostAdmin)

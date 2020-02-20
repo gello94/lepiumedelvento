@@ -87,7 +87,13 @@ img {
     animation: poppy 500ms linear both;
 }
 
+.gallerySizeImg {
+    min-height: 250px;
+    max-height: 250px;
+}
+
 .popup figure img {
+    height: auto !important;
     position: relative;
     z-index: 2;
     border-radius: 15px;
@@ -97,8 +103,6 @@ img {
 .popup figure figcaption {
     position: absolute;
     bottom: 50px;
-    background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.78));
-    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.78));
     z-index: 2;
     width: 100%;
     border-radius: 0 0 15px 15px;

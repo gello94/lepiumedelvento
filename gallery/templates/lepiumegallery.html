@@ -1,11 +1,11 @@
-{% extends 'baseScuola.html' %}
+{% extends 'baseAssociazione.html' %}
 {% load staticfiles %}
 
 {% block content %}
 
-<div class="container-fluid">
+<div class="container-fluid mt-5">
     <div class="container mt-5">
-        <h2 class="mt-5 text-center text-uppercase">{{album.name}}</h2>
+        <h2 class="mt-5 text-center text-uppercase">{{album.title}}</h2>
         <div class="row">
             <div class="gallery">
                 <div class="row">
@@ -13,11 +13,10 @@
                         <div class="row">
                             {% for image in images %}
                             <div class="col-sm-12 col-md-6 col-lg-4">
-                                <figure>
-                                    <img src="{{image.img_link}}" alt="{{image.img_link}}" />
+                                <figure class="h-100 gallerySizeImg">
+                                    <img class="h-100" src="/media/fotolepiume/{{album.name}}/{{image}}"
+                                        alt="{{image}}" />
                                     <figcaption>
-                                        {% if image.titolo != None %}{{image.titolo}} {%endif%}
-                                        <small>{% if image.descrizione != None %}{{image.descrizione}}{%endif%}</small>
                                     </figcaption>
                                 </figure>
                             </div>

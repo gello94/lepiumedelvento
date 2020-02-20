@@ -6,9 +6,14 @@ def index(request):
     return render(request, "index.html")
 
 
-def contact_us(request):
+def contactGliAmici(request):
     '''Contact Us view'''
-    return render(request, 'contact.html')
+    return render(request, 'contactGliAmici.html')
+
+
+def contactLePiume(request):
+    '''Contact Us view'''
+    return render(request, 'contactLePiume.html')
 
 
 def privacy(request):

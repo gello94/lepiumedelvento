@@ -39,7 +39,7 @@ def newsGliAmici(request):
     return render(request, "newsGliAmici.html", {'posts': posts, 'pagination_posts': pagination_posts})
 
 
-def post_detail(request, pk):
+def post_detailGliAmici(request, pk):
     """
     Create a view that returns a single
     Post object based on the post ID (pk) and
@@ -51,4 +51,19 @@ def post_detail(request, pk):
     post.views += 1
     post.save()
 
-    return render(request, "postdetail.html", {'post': post})
+    return render(request, "postdetailGliAmici.html", {'post': post})
+
+
+def post_detailLePiume(request, pk):
+    """
+    Create a view that returns a single
+    Post object based on the post ID (pk) and
+    render it to the 'postdetail.html' template.
+    Or return a 404 error if the post is
+    not found
+    """
+    post = get_object_or_404(Post, pk=pk)
+    post.views += 1
+    post.save()
+
+    return render(request, "postdetailLePiume.html", {'post': post})
