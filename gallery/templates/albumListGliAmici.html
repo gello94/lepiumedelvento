@@ -3,25 +3,26 @@
 
 {% block content %}
 
-<div class="container mt-5">
-    <h2 class="text-center mt-5 mb-5">Albums</h2>
-    <div class="row">
-        {%for album in albums %}
-        <div class="col-sm-12 col-md-6 col-lg-4 p-3">
-            <a href="{% url 'gliAmiciGallery' album.id %}">
-                <div class="card cardGallery bg-dark text-white">
-                    <img src="{{album.cover}}" class="card-img" alt="{{album.title}}">
-                    <div class="card-img-overlay card-title-gallery">
-                        <h5 class="card-title text-white font-weight-bold">{{album.title}}</h5>
-                        {% if album.description != none %}
-                        <p class="card-text">{{album.description}}</p>
-                        {% endif %} <p class="card-text">{{album.published_date|date:"d M Y"}}</p>
+<section>
+    <div class="container">
+        <h2 class="text-center font-weight-bold text-uppercase mb-3">Galleria Fotografica</h2>
+        <div class="row">
+            {%for album in albums %}
+            <div class="col-sm-12 col-md-6 col-lg-4 p-3">
+                <a href="{% url 'gliAmiciGallery' album.id %}">
+                    <div class="card cardGallery bg-dark text-white">
+                        <img src="{{album.cover}}" class="card-img" alt="{{album.title}}">
+                        <div class="card-img-overlay card-title-gallery">
+                            <h5 class="card-title text-white font-weight-bold">{{album.title}}</h5>
+                            {% if album.description != none %}
+                            <p class="card-text">{{album.description}}</p>
+                            {% endif %} <p class="card-text">{{album.published_date|date:"d M Y"}}</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-</div>
-
+</section>
 {%endblock%}
