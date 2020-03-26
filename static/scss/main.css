@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Poppins|Indie+Flower|Knewave|Lobster|Merienda|Satisfy&display=swap");
+/* $font-title: 'Merienda',
+sans-serif; */
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 html {
   min-height: 100%;
 }
 
 body {
-  font-family: "Merienda", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 img {

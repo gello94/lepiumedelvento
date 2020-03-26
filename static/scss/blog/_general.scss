@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Poppins|Indie+Flower|Knewave|Lobster|Merienda|Satisfy&display=swap');
 
+/* $font-title: 'Merienda',
+sans-serif; */
 
-$font-stack: 'Merienda',
+$font-stack: 'Roboto',
 sans-serif;
 $primary-color: #333;
 
@@ -12,6 +14,7 @@ html {
 body {
     font-family: $font-stack;
 }
+
 
 img {
     max-width: 100%;
