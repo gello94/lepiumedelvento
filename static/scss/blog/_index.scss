@@ -45,15 +45,16 @@
 .piumeDelVentoHomePage,
 .associazioneHomePage {
     border: 1px solid;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 1px 0px 3px 4px #888888;
     margin: auto;
-    background-color: #00000061
+    background-color: #00000082;
 }
 
 .piumeDelVentoHomePage:hover,
 .associazioneHomePage:hover {
-    background-color: #69343452;
+    -webkit-box-shadow: 1px 0px 3px 4px #888888;
+    box-shadow: 0 0px 10px 9px #888888;
 }
 
 @media (min-width:992px) {

@@ -14,9 +14,9 @@
                             <div class="row">
                                 {% for image in images %}
                                 <div class="col-sm-12 col-md-6 col-lg-4">
-                                    <figure class="h-100 gallerySizeImg">
-                                        <img class="h-100" src="/media/fotogliamici/{{album.name}}/{{image}}"
-                                            alt="{{image}}" />
+                                    <figure class="gallerySizeImg">
+                                        <img id="galleryImages" class="h-100 imgResizingGallery"
+                                            src="/media/fotogliamici/{{album.name}}/{{image}}" alt="{{image}}" />
                                         <figcaption>
                                         </figcaption>
                                     </figure>

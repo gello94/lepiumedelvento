@@ -40,25 +40,23 @@
             <div class="row text-center">
 
                 <!-- Scuola Logo-->
-                <div class="col-sm-12 col-md-6 piumeDelVentoHomePage">
+                <div class="col-sm-12 col-md-10 piumeDelVentoHomePage">
                     <a href="{% url 'scuolaHome' %}">
                         <div class="scuolaHomeImg h100">
-                            <img class="mx-auto imgHomePage" src="/media/img/scuola_white.png" alt="associazione-logo">
+                            <img class="mx-auto imgHomePage" src="/media/img/scuola_logo.png" alt="associazione-logo">
                         </div>
                     </a>
                 </div>
-                <div class="col-sm-12 col-md-5"></div>
             </div>
 
             <hr class="indexHr">
 
             <!-- Associazione Logo-->
             <div class="row">
-                <div class="col-sm-12 col-md-5"></div>
-                <div class="col-sm-12 col-md-6 associazioneHomePage">
+                <div class="col-sm-12 col-md-10 associazioneHomePage">
                     <a href="{% url 'associazioneHome' %}">
                         <div class="associazioneHomeImg h-100">
-                            <img class="mx-auto imgHomePage" src="/media/img/associazione_completo_white.png"
+                            <img class="mx-auto imgHomePage" src="/media/img/associazione_logo.png"
                                 alt="associazione-logo">
                         </div>
                     </a>
@@ -75,6 +73,25 @@
     <!-- Personal JS-->
     <script src="{% static 'js/custom.js' %}"></script>
 
+    <script>
+        function deleteAllCookies() {
+            var cookies = document.cookie.split(";");
+
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];
+                var eqPos = cookie.indexOf("=");
+                var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            }
+        }
+
+        deleteAllCookies()
+    </script>
+
+    <!--Policy coockies privacy-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?theme=flying&always=1&showNoConsent=1&showPolicyLink=1&privacyPage=%2Fhome%2Finformativaprivacy">
+    </script>
 </body>
 
 </html>

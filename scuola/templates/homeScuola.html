@@ -15,16 +15,17 @@
             </div>
 
             <!-- Callout -->
+            {% for ad in adverts %}
             <div class="callout-row jumbotron-container">
                 <div class="jumbotron page-jumbotron">
-                    <h1 class="display-4">News Title</h1>
-                    <p class="lead">News sub-header</p>
-                    <hr class="my-4 advert-hr">
-                    <p>News body
+                    <h1 class="display-4">{{ad.titolo}}</h1>
+                    <p class="lead">{{ad.published_date|date:"d M Y"}}</p>
                     </p>
-                    <a class="btn btn-primary btn-lg advert-btn" href="" role="button">Read More</a>
+                    <a class="btn btn-primary btn-lg advert-btn" href="{% url 'postdetailGliAmici' ad.id %}"
+                        role="button">Vedi Articolo</a>
                 </div>
             </div>
+            {% endfor %}
             <!-- /.callout -->
         </div>
     </div>
@@ -136,6 +137,24 @@
                                     <li>2017 - <span class="font-italic font-weight-bold">Frammenti d’estate</span>,
                                         commedia scritta da Alessandra Annicchiarico, allieva della scuola di teatro,
                                         con la supervisione di Pia Martino;</li>
+                                    <li>2018 - <span class="font-italic font-weight-bold">Pinocchio</span>,
+                                        commedia tratta dal romanzo di C.Collodi,
+                                        riadattamento re regia Pia Martino;</li>
+                                    <li>2018 - <span class="font-italic font-weight-bold">Alla conquista del
+                                            mondo</span>,
+                                        commedia scritta e diretta da
+                                        Pia Martino;</li>
+                                    <li>2019 - <span class="font-italic font-weight-bold">In Musica!</span>,
+                                        saggio di musica, chitarra classica diretto da
+                                        Nicola Steduto;</li>
+                                    <li>2019 - <span class="font-italic font-weight-bold">La magia delle tre
+                                            fate</span>, commedia musicale scritta e diretta da Pia Martino;</li>
+                                    <li>2019 - <span class="font-italic font-weight-bold">Mary Poppins, una tata per
+                                            amica</span>,
+                                        commedia musicale liberamente ispirata al musical “Mary Poppins”,
+                                        riadattamento e regia di Pia Martino e Luigi Ciavarella;</li>
+                                    <li>2019 - <span class="font-italic font-weight-bold">Noi ragazzi del 60’</span>,
+                                        commedia musicale scritta da Pia Martino e diretta da Luigi Ciavarella;</li>
                                 </ul>
                             </div>
                         </div>
@@ -271,4 +290,5 @@
     </div>
 </div>
 <!--./Orari e contatti-->
+
 {% endblock %}

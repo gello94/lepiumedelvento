@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
-img {
-    display: block;
+.imgResizingGallery {
+    max-height: 250px;
+    min-height: 250px;
 }
 
 .gallery {
@@ -32,7 +33,6 @@ img {
 .gallery figure {
     -ms-flex-preferred-size: 33.333%;
     flex-basis: 33.333%;
-    padding: 10px;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;

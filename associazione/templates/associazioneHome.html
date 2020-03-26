@@ -15,17 +15,20 @@
             </div>
 
             <!-- Callout -->
+            {% for ad in adverts %}
             <div class="callout-row jumbotron-container">
                 <div class="jumbotron page-jumbotron">
-                    <h1 class="display-4">News Title</h1>
-                    <p class="lead">News sub-header</p>
-                    <hr class="my-4 advert-hr">
-                    <p>News body
+                    <p class="lead">Ultima Novità</p>
+                    <h1 class="display-4">{{ad.titolo}}</h1>
+                    <p class="lead">{{ad.published_date|date:"d M Y"}}</p>
                     </p>
-                    <a class="btn btn-primary btn-lg advert-btn" href="" role="button">Read More</a>
+                    <a class="btn btn-primary btn-lg advert-btn" href="{% url 'postdetailGliAmici' ad.id %}"
+                        role="button">Vedi Articolo</a>
                 </div>
             </div>
+            {% endfor %}
             <!-- /.callout -->
+
         </div>
     </div>
 </div>
@@ -147,6 +150,15 @@
                                         Parodia, parodia scritta e diretta da Pia Martino;</li>
                                     <li>2017 - <span class="font-italic font-weight-bold">Il Varietà, Teatro e
                                             Musica</span>, spettacolo di varietà diretto da Luigi
+                                        Ciavarella;</li>
+                                    <li>2018 - <span class="font-italic font-weight-bold">Le Beffe delle
+                                            Maschere</span>, commedia scritta e diretta da Pia
+                                        Martino;</li>
+                                    <li>2018 - <span class="font-italic font-weight-bold">Pinocchio, il ribelle</span>,
+                                        commedia scritta e diretta da Pia
+                                        Martino;</li>
+                                    <li>2019 - <span class="font-italic font-weight-bold">Bravo…Grazie!</span>,
+                                        spettacolo di varietà diretto da Luigi
                                         Ciavarella;</li>
                                 </ul>
                             </div>

@@ -357,16 +357,17 @@ hr {
 .piumeDelVentoHomePage,
 .associazioneHomePage {
   border: 1px solid;
-  border-radius: 30px;
+  border-radius: 10px;
   -webkit-box-shadow: 1px 0px 3px 4px #888888;
           box-shadow: 1px 0px 3px 4px #888888;
   margin: auto;
-  background-color: #00000061;
+  background-color: #00000082;
 }
 
 .piumeDelVentoHomePage:hover,
 .associazioneHomePage:hover {
-  background-color: #69343452;
+  -webkit-box-shadow: 1px 0px 3px 4px #888888;
+  box-shadow: 0 0px 10px 9px #888888;
 }
 
 @media (min-width: 992px) {
@@ -517,8 +518,9 @@ section .section-title {
           box-sizing: border-box;
 }
 
-img {
-  display: block;
+.imgResizingGallery {
+  max-height: 250px;
+  min-height: 250px;
 }
 
 .gallery {
@@ -547,7 +549,6 @@ img {
 .gallery figure {
   -ms-flex-preferred-size: 33.333%;
   flex-basis: 33.333%;
-  padding: 10px;
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;

@@ -34,6 +34,10 @@
     <!--Personal CSS-->
     <link rel="stylesheet" href="{% static 'scss/main.css' %}">
 
+    <!--Policy coockies privacy-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?theme=flying&always=1&showNoConsent=1&showPolicyLink=1&privacyPage=%2Fhome%2Finformativaprivacy">
+    </script>
 
 </head>
 
@@ -42,7 +46,8 @@
     <nav id="navbar" class="navbar fixed-top navbar-expand-md navbar-dark cyan darken-3"
         style=" background-color: #ff0a0a;">
         <div class="navbar-header text-left w-0">
-            <a class="text-light changeSiteBtn" href="{%url 'index'%}"><i class="fas fa-exchange-alt"></i></a>
+            <a class="text-light changeSiteBtn" href="{%url 'index'%}"><i class="fas fa-exchange-alt"
+                    data-toggle="tooltip" data-placement="bottom" title="Cambia Sito"></i></a>
         </div>
         <div class="container-fluid">
             <div class="navbar-header text-center">
@@ -92,33 +97,29 @@
             <!-- Grid row-->
             <div class="row">
 
-                <!-- Grid column -->
+                <!-- socials column -->
                 <div class="col-md-12 mt-3">
                     <div class="flex-center text-light text-center">
 
                         <!-- Facebook -->
-                        <a class="fb-ic text-light" href="https://www.facebook.com/lepiume.delvento/?ref=br_rs"
-                            target="_blank">
+                        <a class="fb-ic text-light" href="https://www.facebook.com/lepiume.delvento/" target="_blank">
                             <i class="fab fa-facebook-f fa-lg white-text mr-md-2 mr-3 fa-2x"> </i>
                         </a>
-                        <!-- Twitter -->
-                        <a class="tw-ic text-light">
-                            <i class="fab fa-twitter fa-lg white-text mr-md-2 mr-3 fa-2x"> </i>
-                        </a>
                         <!-- Youtube-->
-                        <a class="youtube-ic text-light">
+                        <a class="youtube-ic text-light"
+                            href="https://www.youtube.com/channel/UCpqW6JTaA9wXAyLJj_7Ilkg?view_as=subscriber">
                             <i class="fab fa-youtube fa-lg white-text mr-md-2 mr-3 fa-2x"> </i>
                         </a>
                         <!--Instagram-->
-                        <a class="ins-ic text-light">
+                        <a class="ins-ic text-light"
+                            href="https://www.instagram.com/lepiumedelventoscuoladiteatro/?hl=it">
                             <i class="fab fa-instagram fa-lg white-text mr-md-2 mr-3 fa-2x"> </i>
                         </a>
                     </div>
                 </div>
-                <!-- Grid column -->
+                <!-- socials column -->
 
             </div>
-            <!-- Grid row-->
             <!-- Footer Links -->
             <div class="container text-center text-md-left mt-5 text-light">
 
@@ -126,7 +127,7 @@
                 <div class="row mt-3">
 
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
 
                         <!-- Content -->
                         <h6 class="text-uppercase font-weight-bold">Gli Amici Del Teatro</h6>
@@ -138,44 +139,15 @@
                     </div>
                     <!-- Grid column -->
 
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links column -->
+                    <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
 
                         <!-- Links -->
-                        <h6 class="text-uppercase font-weight-bold">Products</h6>
-                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>
-                            <a class="text-light" href="#!">MDBootstrap</a>
-                        </p>
-                        <p>
-                            <a class="text-light" href="#!">MDWordPress</a>
-                        </p>
-                        <p>
-                            <a class="text-light" href="#!">BrandFlow</a>
-                        </p>
-                        <p>
-                            <a class="text-light" href="#!">Bootstrap Angular</a>
-                        </p>
-
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                        <!-- Links -->
-                        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                        <h6 class="text-uppercase font-weight-bold">Link Utili</h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
                             <a class="text-light" href="{% url 'informativaprivacy'%}">Informativa Privacy</a>
                         </p>
-                        <p>
-                            <a class="text-light" href="#!">Become an Affiliate</a>
-                        </p>
-                        <p>
-                            <a class="text-light" href="#!">Help</a>
-                        </p>
-
                     </div>
                     <!-- Grid column -->
 
@@ -183,7 +155,7 @@
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                         <!-- Links -->
-                        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                        <h6 class="text-uppercase font-weight-bold">Contatti</h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
                             <i class="fas fa-home mr-3"></i>
@@ -210,6 +182,19 @@
 
         </div>
         <!-- Footer Elements -->
+
+        <!-- Affiliate-->
+        <div class="container text-center text-md-left mt-5 text-ligh mb-3">
+            <h4 class="text-light text-center">Sodalizio affidato a:</h4>
+            <div class="row">
+                <div class="col-sm"><img class="mx-auto" src="/static/image/loghi/csain.png" alt=""></div>
+                <div class="col-sm"><img class="mx-auto" src="/static/image/loghi/fedita.jpg" alt=""></div>
+                <div class="col-sm"><img class="mx-auto" src="/static/image/loghi/fipass.png" alt=""></div>
+                <div class="col-sm"><img class="mx-auto" src="/static/image/loghi/metpass.png" alt=""></div>
+                <div class="col-sm"><img class="mx-auto" src="/static/image/loghi/performer.png" alt=""></div>
+            </div>
+        </div>
+        <!-- ./Affiliate-->
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3 text-white-50" style=" background-color: #960200e0;">© 2020 Web
