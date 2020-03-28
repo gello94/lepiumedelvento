@@ -1,9 +1,10 @@
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import gliAmiciGallery, lePiumeGallery, galleryListLePiume, galleryListGliAmici
+from .views import gliAmiciGallery, lePiumeGallery, galleryListLePiume, galleryListGliAmici, gallery
 
 urlpatterns = [
+    path('gallery/<int:pk>', gallery, name='gallery'),
     path('gliamicidelteatro',
          galleryListGliAmici, name="galleryListGliAmici"),
     path('gliamicidelteatro/<int:pk>',

@@ -36,7 +36,7 @@ window.onscroll = function () {
 
 
 
-// Gallery Script
+/* // Gallery Script
 popup = {
     init: function () {
         $('figure').click(function () {
@@ -84,6 +84,65 @@ popup = {
     }
 }
 
-popup.init()
+popup.init() */
 
 lazyload();
+
+
+// Gallery Script -- BUG slideIndex CHANGE ONLY ON SECOND CLICK ?? why??
+
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1
+
+
+function getIndex() {
+    $(".galleryImg").click(function (e) {
+        if (e.originalEvent) {
+            console.log('user clicked')
+        }
+        // `this` is the DOM element that was clicked
+        var index = $(".galleryImg").index(this);
+        slideIndex = index + 1
+        return slideIndex
+    });
+}
+
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide() {
+    showSlides(slideIndex);
+}
+
+getIndex()
+
+
+function showSlides(n) {
+    console.log('current slide is : ' + slideIndex)
+
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+
+}
+showSlides(slideIndex);

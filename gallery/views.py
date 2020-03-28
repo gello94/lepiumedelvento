@@ -58,3 +58,24 @@ def gliAmiciGallery(request, pk):
                 image_list.append(img)
 
     return render(request, "gliamicigallery.html", {"images": image_list, "album": album})
+
+
+def gallery(request, pk):
+    album = get_object_or_404(Gallery, pk=pk)
+
+    app_static_dir = os.path.join(os.path.join(
+        settings.MEDIA_ROOT), 'fotogliamici')
+    folder_list = []
+    image_list = []
+    # you can add the subdirectory here as well with os.path.join
+    for file in os.listdir(app_static_dir):
+        folder_list.append(file)
+
+    for file in folder_list:
+        if file == album.name:
+            img_dir = os.path.join(os.path.join(os.path.join(
+                settings.MEDIA_ROOT), 'fotogliamici'), file)
+            for img in os.listdir(img_dir):
+                image_list.append(img)
+
+    return render(request, "gallery.html", {"images": image_list, "album": album})

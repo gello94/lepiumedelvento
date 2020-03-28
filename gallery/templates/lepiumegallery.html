@@ -1,4 +1,4 @@
-{% extends 'baseScuola.html' %}
+{% extends 'baseAssociazione.html' %}
 {% load static %}
 
 {% block content %}
@@ -14,10 +14,11 @@
                             <div class="row">
                                 {% for image in images %}
                                 <div class="col-sm-12 col-md-6 col-lg-4">
-                                    <figure class=" h-100 gallerySizeImg">
+                                    <figure class="gallerySizeImg">
                                         <img id="galleryImages" class="h-100 galleryImg imgResizingGallery lazyload"
-                                            src="/media/fotolepiume/{{album.name}}/{{image}}" alt="{{image}}" />
-                                        <figcaption class="centered">
+                                            src="/media/fotolepiume/{{album.name}}/{{image}}" alt="{{image}}"
+                                            onclick="openModal(); currentSlide(1);" />
+                                        <figcaption>
                                         </figcaption>
                                     </figure>
                                 </div>
@@ -40,5 +41,21 @@
         </div>
     </div>
 </section>
+
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        {%for image in images %}
+        <div class="mySlides">
+            <img src="/media/fotolepiume/{{album.name}}/{{image}}" alt="{{image}}" style=" width:100%">
+        </div>
+        {% endfor %}
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+</div>
 
 {% endblock %}

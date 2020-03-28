@@ -28,6 +28,9 @@
         })();
     </script>
 
+    {% block css %}
+    {% endblock %}
+
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
@@ -238,6 +241,9 @@
 
     <!-- Personal JS-->
     <script src="{% static 'js/custom.js' %}"></script>
+
+    {%block script%}
+    {% endblock %}
 
 </body>
 
