@@ -8,3 +8,5 @@ env/
 .history/
 *.history
 .vscode
+pythoneverywhere_setting.py
+pythoneverywhere_wsgi.py

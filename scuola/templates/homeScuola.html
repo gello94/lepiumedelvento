@@ -1,5 +1,5 @@
 {% extends 'baseScuola.html' %}
-{% load staticfiles %}
+{% load static %}
 
 {% block content %}
 
@@ -55,7 +55,7 @@
                         </div>
                         <div class="tab-content" id="pills-tabContent">
                             <!--Chi siamo-->
-                            <div class="tab-pane fade show active p-5" id="pills-home" role="tabpanel"
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                 aria-labelledby="pills-home-tab">Le Piume del Vento” è una scuola di formazione teatrale
                                 e cinematografica, laboratorio annuale dell’Associazione Teatrale Culturale “Gli Amici
                                 del Teatro” con una propria sede legale. La scuola è nata per scoprire e formare nuovi
@@ -173,7 +173,7 @@
         <div id="bestsellers-carousel" class="carousel slide my-4" data-ride="carousel">
 
             <!-- Wrapper for slides -->
-            <div class="carousel-inner w-75 mx-auto">
+            <div class="carousel-inner w-85 mx-auto">
                 <div class="carousel-item active">
                     <div class="row-carousel" style="display:-webkit-box">
                         {% for post in posts %}
@@ -190,7 +190,7 @@
                                     <h4 class="card-title">
                                         <a href="{% url 'postdetailGliAmici' post.id %}">{{ post.titolo }}</a>
                                     </h4>
-                                    <p class="card-text text-dark">{{ post.contenuto|truncatechars:35|safe }}<a
+                                    <p class="card-text text-dark">{{ post.contenuto | truncatewords:35 | safe}}<a
                                             href="{% url 'postdetailGliAmici' post.id %}">LEGGI ALTRO</a></p>
                                     <div>
                                     </div>

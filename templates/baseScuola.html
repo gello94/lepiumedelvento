@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 
 <!DOCTYPE html>
 
@@ -12,7 +12,6 @@
     <meta name="author" content="Antonio Augello">
 
     <title>Le Piume del Vento</title>
-
 
     {%block title %}
     {% endblock %}
@@ -56,7 +55,11 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand navbar-text text-center" href="{% url 'scuolaHome' %}">Le Piume del Vento</a>
+                <a class="navbar-brand" href="{% url 'scuolaHome' %}">
+                    <img src="/media/img/nav_logo_scuola.png" width="40" height="40" class="d-inline-block align-top"
+                        alt="">
+                    Le Piume del Vento
+                </a>
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto text-center">
@@ -93,92 +96,94 @@
     <!-- Footer -->
     <div class="pt-3 footer bottom" style="background-color: #ff0a0a;">
         <div class="container">
-            <h2 class="text-light text-center">Gli Amici Del Teatro</h2>
-            <!-- Grid row-->
-            <div class="row">
+            <h4 class="text-light text-center">Seguici su:</h2>
 
-                <!-- socials column -->
-                <div class="col-md-12 mt-3">
-                    <div class="flex-center text-light text-center">
+                <!-- Grid row-->
+                <div class="row">
 
-                        <!-- Facebook -->
-                        <a class="fb-ic text-light" href="https://www.facebook.com/lepiume.delvento/" target="_blank">
-                            <i class="fab fa-facebook-f fa-lg white-text mr-md-2 mr-3 fa-2x"> </i>
-                        </a>
-                        <!-- Youtube-->
-                        <a class="youtube-ic text-light"
-                            href="https://www.youtube.com/channel/UCpqW6JTaA9wXAyLJj_7Ilkg?view_as=subscriber">
-                            <i class="fab fa-youtube fa-lg white-text mr-md-2 mr-3 fa-2x"> </i>
-                        </a>
-                        <!--Instagram-->
-                        <a class="ins-ic text-light"
-                            href="https://www.instagram.com/lepiumedelventoscuoladiteatro/?hl=it">
-                            <i class="fab fa-instagram fa-lg white-text mr-md-2 mr-3 fa-2x"> </i>
-                        </a>
-                    </div>
-                </div>
-                <!-- socials column -->
+                    <!-- socials column -->
+                    <div class="col-md-12 mt-3">
+                        <div class="flex-center text-light text-center">
 
-            </div>
-            <!-- Footer Links -->
-            <div class="container text-center text-md-left mt-5 text-light">
-
-                <!-- Grid row -->
-                <div class="row mt-3">
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
-
-                        <!-- Content -->
-                        <h6 class="text-uppercase font-weight-bold">Gli Amici Del Teatro</h6>
-                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>Ass. Culturale Teatrale
-                            “Gli Amici del Teatro”</p>
-                        <p>CF 92044620711</p>
-
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Links column -->
-                    <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                        <!-- Links -->
-                        <h6 class="text-uppercase font-weight-bold">Link Utili</h6>
-                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>
-                            <a class="text-light" href="{% url 'informativaprivacy'%}">Informativa Privacy</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                        <!-- Links -->
-                        <h6 class="text-uppercase font-weight-bold">Contatti</h6>
-                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>
-                            <i class="fas fa-home mr-3"></i>
-                            Via Nicola Totta, 23, 71013 San Giovanni Rotondo, FG</p>
-                        <p>
-                            <i class="fas fa-envelope mr-3"></i>
-                            <a class="text-light" href="mailto:info@lepiumedelvento.it" class="element-content-text">
-                                info@lepiumedelvento.it
+                            <!-- Facebook -->
+                            <a class="fb-ic text-light" href="https://www.facebook.com/lepiume.delvento/"
+                                target="_blank">
+                                <i class="fab fa-facebook-f fa-lg white-text mr-md-2 mr-3 fa-2x"> </i>
                             </a>
-                        </p>
-                        <p>
-                            <i class="fas fa-phone mr-3"></i>
-                            <a class="text-light" href="tel: +39 368 768 0057" class="element-content-text">
-                                +39 368 768 0057
-                            </a></p>
-                        <p>
+                            <!-- Youtube-->
+                            <a class="youtube-ic text-light"
+                                href="https://www.youtube.com/channel/UCpqW6JTaA9wXAyLJj_7Ilkg?view_as=subscriber">
+                                <i class="fab fa-youtube fa-lg white-text mr-md-2 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Instagram-->
+                            <a class="ins-ic text-light"
+                                href="https://www.instagram.com/lepiumedelventoscuoladiteatro/?hl=it">
+                                <i class="fab fa-instagram fa-lg white-text mr-md-2 mr-3 fa-2x"> </i>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Grid column -->
+                    <!-- socials column -->
 
                 </div>
-                <!-- Grid row -->
-            </div>
-            <!-- Footer Links -->
+                <!-- Footer Links -->
+                <div class="container text-center text-md-left mt-5 text-light">
+
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                            <!-- Content -->
+                            <h6 class="text-uppercase">Ass. Culturale Teatrale
+                                “Gli Amici del Teatro”
+                                <br>CF 92044620711</h6>
+
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Links column -->
+                        <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <!-- Links -->
+                            <h6 class="text-uppercase font-weight-bold">Link Utili</h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <a class="text-light" href="{% url 'informativaprivacy'%}">Informativa Privacy</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                            <!-- Links -->
+                            <h6 class="text-uppercase font-weight-bold">Contatti</h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <i class="fas fa-home mr-3"></i>
+                                Via Nicola Totta, 23, 71013 San Giovanni Rotondo, FG</p>
+                            <p>
+                                <i class="fas fa-envelope mr-3"></i>
+                                <a class="text-light" href="mailto:info@lepiumedelvento.it"
+                                    class="element-content-text">
+                                    info@lepiumedelvento.it
+                                </a>
+                            </p>
+                            <p>
+                                <i class="fas fa-phone mr-3"></i>
+                                <a class="text-light" href="tel: +39 368 768 0057" class="element-content-text">
+                                    +39 368 768 0057
+                                </a></p>
+                            <p>
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+                </div>
+                <!-- Footer Links -->
 
         </div>
         <!-- Footer Elements -->
@@ -186,18 +191,38 @@
         <!-- Affiliate-->
         <div class="container text-center text-md-left mt-5 text-ligh mb-3">
             <h4 class="text-light text-center">Sodalizio affidato a:</h4>
-            <div class="row">
-                <div class="col-sm"><img class="mx-auto" src="/static/image/loghi/csain.png" alt=""></div>
-                <div class="col-sm"><img class="mx-auto" src="/static/image/loghi/fedita.jpg" alt=""></div>
-                <div class="col-sm"><img class="mx-auto" src="/static/image/loghi/fipass.png" alt=""></div>
-                <div class="col-sm"><img class="mx-auto" src="/static/image/loghi/metpass.png" alt=""></div>
-                <div class="col-sm"><img class="mx-auto" src="/static/image/loghi/performer.png" alt=""></div>
+            <div class="container">
+                <div class="row">
+                    <div class="mx-auto d-flex">
+                        <div class="p-1">
+                            <img class="w-100 h-100" style="background-color: white; max-width: 100px;"
+                                src="/static/image/loghi/csain.png" alt="">
+                        </div>
+                        <div class="p-1">
+                            <img class="w-100 h-100" style="background-color: white; max-width: 100px;"
+                                src="/static/image/loghi/fedita.jpg" alt="">
+                        </div>
+                        <div class="p-1">
+                            <img class="w-100 h-100" style="background-color: white; max-width: 100px;"
+                                src="/static/image/loghi/fipass.png" alt="">
+                        </div>
+                        <div class="p-1">
+                            <img class="w-100 h-100" style="background-color: white; max-width: 100px;"
+                                src="/static/image/loghi/metpass.png" alt="">
+                        </div>
+                        <div class="p-1">
+                            <img class="w-100 h-100" style="background-color: white; max-width: 100px;"
+                                src="/static/image/loghi/performer.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- ./Affiliate-->
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 text-white-50" style=" background-color: #960200e0;">© 2020 Web
+        <div class="footer-copyright text-center py-3 text-white-50" style=" background-color: #960200e0;">© 2020
+            Web
             Site
             Designed
             and Build:

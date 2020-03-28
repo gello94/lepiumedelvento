@@ -121,6 +121,10 @@ hr {
 }
 
 /************************** Text Formatting******/
+a.text-light:hover {
+  text-decoration: none;
+}
+
 .blog-post-title {
   font-weight: bold !important;
 }
