@@ -43,8 +43,8 @@ popup = {
             popup.open($(this));
             $('.navbar').hide()
             $('figure').removeClass('gallerySizeImg')
-            $('img').addClass('centered')
-            $('img').removeClass('imgResizingGallery')
+            $('img.galleryImg').addClass('centered')
+            $('img.galleryImg').removeClass('imgResizingGallery')
         });
 
         $(document).on('click', '.popup img', function () {
@@ -53,8 +53,8 @@ popup = {
             popup.close();
             $('figure').addClass('gallerySizeImg')
             $('.navbar').show()
-            $('img').removeClass('centered')
-            $('img').addClass('imgResizingGallery')
+            $('img.galleryImg').removeClass('centered')
+            $('img.galleryImg').addClass('imgResizingGallery')
         })
     },
     open: function ($figure) {
@@ -85,3 +85,5 @@ popup = {
 }
 
 popup.init()
+
+lazyload();
