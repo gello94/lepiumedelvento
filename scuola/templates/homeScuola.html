@@ -21,7 +21,7 @@
                     <h1 class="display-4">{{ad.titolo}}</h1>
                     <p class="lead">{{ad.published_date|date:"d M Y"}}</p>
                     </p>
-                    <a class="btn btn-primary btn-lg advert-btn" href="{% url 'postdetailGliAmici' ad.id %}"
+                    <a class="btn btn-primary btn-lg advert-btn" href="{% url 'postdetailLePiume' ad.id %}"
                         role="button">Vedi Articolo</a>
                 </div>
             </div>
@@ -184,14 +184,14 @@
                                     <p class="dateText"> {{post.published_date|date:"d M"}}
                                         {{post.published_date|date:"Y"}}</p>
                                 </span>
-                                <a href="{% url 'postdetailGliAmici' post.id %}"><img class="img-shop card-img-top"
+                                <a href="{% url 'postdetailLePiume' post.id %}"><img class="img-shop card-img-top"
                                         src="{{ post.image }}" alt=" {{ post.titolo }}"></a>
                                 <div class="card-body">
                                     <h4 class="card-title">
-                                        <a href="{% url 'postdetailGliAmici' post.id %}">{{ post.titolo }}</a>
+                                        <a href="{% url 'postdetailLePiume' post.id %}">{{ post.titolo }}</a>
                                     </h4>
                                     <p class="card-text text-dark">{{ post.contenuto | truncatewords:35 | safe}}<a
-                                            href="{% url 'postdetailGliAmici' post.id %}">LEGGI ALTRO</a></p>
+                                            href="{% url 'postdetailLePiume' post.id %}">LEGGI ALTRO</a></p>
                                     <div>
                                     </div>
                                 </div>
